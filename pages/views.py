@@ -21,7 +21,7 @@ class AboutPageView(TemplateView):
             "title": "About us - Online Store",
             "subtitle": "About us",
             "description": "This is an about page Online Store is a web application developed as an academic project using the Django framework.",
-            "author": "Developed by: Emilton Mena Acevedo",
+            "author": "Developed by: Mariana Hincapie Henao",
         })
         return context
 
