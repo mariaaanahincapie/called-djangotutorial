@@ -1,37 +1,42 @@
-Django Tutorials — Online Store
-===============================
+# Django Tutorials — Online Store
 
-This repository is the sample Django application built while following a Django tutorial. It includes simple pages (Home, About, Contact), a Products section with listing, detail, and a form to create products (in-memory simulation), and basic static styling.
+This repository is the sample Django application built while following a Django tutorial. It includes simple pages (Home, About, Contact), a Products section with listing, detail, and a form to create products, a shopping cart system using sessions, and dependency injection with image upload functionality.
 
-Quick start
------------
+## Quick start
+
 1. Clone the repo:
+git clone https://github.com/mariaaanahincapie/called-djangotutorial.git
+cd called-djangotutorial
 
-   git clone https://github.com/EmiltonMenaA/called-DjangoTutorials.git
-   cd called-DjangoTutorials
+2. Create and activate a virtual environment (Anaconda):
+conda create -n django_env python=3.11
+conda activate django_env
 
-2. Create and activate a virtual environment (Windows PowerShell):
+3. Install dependencies:
+pip install django
+pip install factory_boy
 
-   python -m venv venv
-   .\venv\Scripts\Activate.ps1
+4. Apply migrations and seed the database:
+python manage.py migrate
+python manage.py seed_products
 
-3. Install dependencies (Django 6.x recommended):
+5. Run the development server:
+python manage.py runserver
 
-   pip install django==6.0.1
+6. Open the app in your browser at http://127.0.0.1:8000/
 
-4. Apply migrations and run the development server:
+## Useful routes
 
-   python manage.py migrate
-   python manage.py runserver
+* `/` — Home
+* `/about/` — About
+* `/contact/` — Contact
+* `/products/` — Product list
+* `/products/<id>` — Product detail
+* `/products/create` — Create product form
+* `/cart/` — Shopping cart
+* `/image/` — Image upload with Dependency Injection
+* `/imagenotdi/` — Image upload without Dependency Injection
 
-5. Open the app in your browser at http://127.0.0.1:8000/
+## Author
 
-Useful routes
--------------
-- / — Home
-- /about/ — About
-- /contact/ — Contact
-- /products/ — Product list
-- /products/<id> — Product details
-- /products/create — Create product form
-
+Developed by: Mariana Hincapie Henao
